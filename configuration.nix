@@ -57,7 +57,7 @@
     defaultUserShell = pkgs.zsh;
     users.archo = {
       isNormalUser = true;
-      description = "archo";
+      description = "archie";
       extraGroups = [ "networkmanager" "wheel" ];
       packages = with pkgs; [];
     };
