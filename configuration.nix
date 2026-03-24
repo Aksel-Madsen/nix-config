@@ -84,6 +84,7 @@
     hyprlauncher
     hyprcursor
     rose-pine-hyprcursor
+    libreoffice
   ];
 
   fonts.packages = with pkgs; [
@@ -148,4 +149,25 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.11"; # Did you read the comment?
+
+  # Enable Nvidia stuff for doing stuff
+  # Enable OpenGL
+  hardware.graphics = {
+    enable = true;
+  };
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = ["nvidia"];
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
+    # Open source driver
+    open = false;
+    # Enable nvidia settings
+    nvidiaSettings = true;
+    # Select driver version; 1080 ti is best at version 580.x, so production is selected
+    package = config.boot.kernelPackages.nvidiaPackages.production;
+  };
 }
