@@ -42,6 +42,7 @@
     LC_TIME = "da_DK.UTF-8";
   };
 
+  services.upower.enable =true;
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "dk";
