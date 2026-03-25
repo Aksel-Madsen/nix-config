@@ -85,6 +85,7 @@
     hyprcursor
     rose-pine-hyprcursor
     libreoffice
+    brightnessctl
   ];
 
   fonts.packages = with pkgs; [
