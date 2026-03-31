@@ -75,6 +75,8 @@
     gnumake
     alacritty
     firefox
+    clang
+    clang-tools
     unzip
     dmenu
     pavucontrol
