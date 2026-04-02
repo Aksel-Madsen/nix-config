@@ -84,7 +84,6 @@
     texliveFull
     zathura
     steam-run
-    hyprlauncher
     hyprcursor
     rose-pine-hyprcursor
     libreoffice
