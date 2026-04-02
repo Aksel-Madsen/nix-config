@@ -78,7 +78,6 @@
     clang
     clang-tools
     unzip
-    dmenu
     pavucontrol
     home-manager
     texliveFull
@@ -89,6 +88,11 @@
     libreoffice
     brightnessctl
     libnotify
+    wl-clipboard
+    rofi
+    cliphist
+    grim
+    slurp
   ];
 
   fonts.packages = with pkgs; [
